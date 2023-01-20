@@ -43,7 +43,7 @@ const IncluiUser = (props) => {
             foto: "https://randomuser.me/api/portraits/med/women/53.jpg"
 
         }
-        //var dataDeHoje = moment(new Date()).format("DD/MM/YYYY")
+        
         if (!(await validarUsuario())) return
         const valueToken = localStorage.getItem("token")
 
@@ -106,8 +106,14 @@ const IncluiUser = (props) => {
         <div>
             <Cabecalho />
             <Menu />
-            <h1 className='titulo-pagina-user'>Cadastrar usuário</h1>
-            <MensagemErro tipo={status.type} message={status.message} />
+            <div className='mensagem-erro-inclui-user'>
+                <h1 className='titulo-pagina-user'>Cadastrar usuário</h1>
+            </div>
+            
+            <div classname="mensagem-erro-inclui-user">
+                <MensagemErro tipo={status.type} message={status.message} />
+            </div>
+            
             <form onSubmit={salvar}>
                 <div className='form-user'>
                     <div className='campo-form-user'>
@@ -156,7 +162,7 @@ const IncluiUser = (props) => {
                         </div><input
                             value={password}
                             className='titulo-user-input'
-                            type="text"
+                            type="password"
                             placeholder='Digite o username do user'
                             onChange={(evento) => setPassword(evento.target.value)}
                             autoFocus />

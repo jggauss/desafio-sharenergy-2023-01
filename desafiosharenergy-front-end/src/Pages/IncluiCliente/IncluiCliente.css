@@ -14,6 +14,10 @@
     padding: 0 32px;
     color: darkslategrey;
 }
+
+.tabula-mensagem-erro-inclui{
+    padding:80px
+}
 .titulo-inclui-label{
     display: block;
     width: 60px;

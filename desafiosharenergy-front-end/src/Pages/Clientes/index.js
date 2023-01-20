@@ -113,7 +113,7 @@ const Clientes = () => {
                     <button className='cor-btn-desligado' disabled type='button'>{page}</button>
                     {page + 1 <= lastPage ? <button className='cor-btn' type='button' onClick={() => GetClientes(page + 1)} >{page + 1}</button> : ""}
 
-                    {page !== lastPage - 1 ? <button className='cor-btn' type='button' onClick={() => GetClientes(lastPage)}>Ultíma</button> : <button className='cor-btn-desligado' disabled>Ultíma</button>}
+                    {page !== lastPage  ? <button className='cor-btn' type='button' onClick={() => GetClientes(lastPage)}>Ultíma</button> : <button className='cor-btn-desligado' disabled>Ultíma</button>}
                 </div>
             </table>
 

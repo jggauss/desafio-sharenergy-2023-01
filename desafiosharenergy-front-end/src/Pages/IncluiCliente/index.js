@@ -134,7 +134,11 @@ const IncluiCliente = (props) => {
             <Cabecalho />
             <Menu />
             <h1 className='titulo-pagina'>Cadastrar cliente</h1>
-            <MensagemErro tipo={status.type} message={status.message} />
+            <div classname="tabula-mensagem-erro-inclui">
+                <MensagemErro tipo={status.type} message={status.message} />
+            </div>
+
+            
             <form onSubmit={salvar} >
                 <div className='form-cliente-inclui'>
                     <div className='campo-form-cliente-inclui'>
