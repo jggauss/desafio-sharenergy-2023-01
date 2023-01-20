@@ -1,3 +1,9 @@
+### Instalar depências
+npm install 
+
+### rodar o código
+npm start
+
 ### Express
 npm install express
 
