@@ -10,19 +10,19 @@ import Cabecalho from '../../Components/Cabecalho'
 const Clientes = () => {
     var { state } = useLocation()
     const [data, setData] = useState([])
-    const [page, setPage]= useState('')
-    const [lastPage,setLastPage]= useState('')
+    const [page, setPage] = useState('')
+    const [lastPage, setLastPage] = useState('')
     const [status, setStatus] = useState({
         type: state ? state.type : '',
         message: state ? state.message : ''
     })
 
     const GetClientes = async (page) => {
-        if(page===undefined){
-            page=1
+        if (page === undefined) {
+            page = 1
         }
         setPage(page)
-        
+
         const valueToken = localStorage.getItem("token")
 
         const headers = {
@@ -30,7 +30,7 @@ const Clientes = () => {
                 'Authorization': "Bearer " + valueToken
             }
         }
-        await api.get('/clientes/'+page,headers)
+        await api.get('/clientes/' + page, headers)
             .then((response) => {
                 setData(response.data.clientes)
                 setLastPage(response.data.lastPage)
@@ -53,34 +53,40 @@ const Clientes = () => {
 
             <table className='tabela'>
                 <div className='sub-cabecalho'>
-                    <div>
-                        <h1>Clientes</h1>
+                    <div className='divide-tela-superior'>
+                        <h1 className='nome-titulo-cel'>Clientes</h1>
                     </div>
+                </div>
+                <div className='divide-tela-superior'>
+
 
                     <div className='btn-sub-cabecalho'>
-                    <div className='separa-rodape'>
-                            <Botao className="tamanho">
-                                <Link className='inclui-cliente' to='/clientes/inclui'>Incluir</Link>
+                        <div className='separa-rodape'>
+                            <Botao>
+                                <Link className='inclui-clientes' to='/clientes/inclui'>Incluir</Link>
                             </Botao>
 
                         </div>
                         <div className='separa-rodape'>
                             <Botao>
-                                <Link className='inclui-cliente' to="/home">Voltar</Link>
+                                <div className='btn-cons'>
+                                <Link className='inclui-clientes' to="/home">Voltar</Link>
+                                </div>
                             </Botao>
 
                         </div>
 
                     </div>
                 </div>
+
                 <MensagemErro tipo={status.type} message={status.message} />
                 <thead>
-                    <tr>
+                    <tr className='item-tabela-cliente'>
                         <th>Nome</th>
-                        <th>E-mail</th>
-                        <th>CPF</th>
-                        <th>Telefone</th>
-                        <th>Ação</th>
+                        <th className='item-tabela-cliente-cel'>E-mail</th>
+                        <th className='item-tabela-cliente-cel'>CPF</th>
+                        <th className='item-tabela-cliente-cel'>Telefone</th>
+                        <th >Ação</th>
 
                     </tr>
                 </thead>
@@ -89,9 +95,9 @@ const Clientes = () => {
                         <tr key={dado._id}>
                             {dado.length > 0 ? data : null}
                             <td className='item-tabela-cliente'>{dado.nome}</td>
-                            <td className='item-tabela-cliente'>{dado.email}</td>
-                            <td className='item-tabela-cliente'>{dado.cpf}</td>
-                            <td className='item-tabela-cliente'>{dado.telefone}</td>
+                            <td className='item-tabela-cliente item-tabela-cliente-cel'>{dado.email}</td>
+                            <td className='item-tabela-cliente item-tabela-cliente-cel'>{dado.cpf}</td>
+                            <td className='item-tabela-cliente item-tabela-cliente-cel'>{dado.telefone}</td>
                             <div className='acoes'>
                                 <Link className='edita' to={'/clientes/consulta/' + dado._id}>Consulta</Link>
                                 <Link className='altera' to={'/clientes/edita/' + dado._id}>Altera</Link>
@@ -103,11 +109,11 @@ const Clientes = () => {
                 </tbody>
                 <div >
                     {page !== 1 ? <button className='cor-btn' type='button' onClick={() => GetClientes(1)}>Primeira</button> : <button className='cor-btn-desligado' disabled>Primeira</button>}
-                    {page !== 1 ? <button className='cor-btn'  type='button' onClick={() => GetClientes(page - 1)}>{page - 1}</button> : ""}
-                    <button className='cor-btn-desligado'  disabled type='button'>{page}</button>
-                    {page + 1 <= lastPage ? <button className='cor-btn'  type='button' onClick={() => GetClientes(page + 1)} >{page + 1}</button> : ""}
+                    {page !== 1 ? <button className='cor-btn' type='button' onClick={() => GetClientes(page - 1)}>{page - 1}</button> : ""}
+                    <button className='cor-btn-desligado' disabled type='button'>{page}</button>
+                    {page + 1 <= lastPage ? <button className='cor-btn' type='button' onClick={() => GetClientes(page + 1)} >{page + 1}</button> : ""}
 
-                    {page !== lastPage -1? <button className='cor-btn'  type='button' onClick={() => GetClientes(lastPage)}>Ultíma</button> : <button  className='cor-btn-desligado' disabled>Ultíma</button>}
+                    {page !== lastPage - 1 ? <button className='cor-btn' type='button' onClick={() => GetClientes(lastPage)}>Ultíma</button> : <button className='cor-btn-desligado' disabled>Ultíma</button>}
                 </div>
             </table>
 

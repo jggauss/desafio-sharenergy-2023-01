@@ -4,14 +4,11 @@ import Botao from '../../Components/Botao'
 import Menu from '../../Components/Menu'
 import api from '../../Config/ConfigApi'
 import MensagemErro from '../../Components/MensagemErro'
-import MaskedInput from 'react-text-mask'
+
 import Cabecalho from '../../Components/Cabecalho'
 import { Link } from 'react-router-dom'
 import * as yup from 'yup';
 
-
-
-const moment = require("moment");
 
 
 const IncluiUser = (props) => {
@@ -26,7 +23,7 @@ const IncluiUser = (props) => {
     const [email, setEmail] = useState('')
     const [userName, setUserName] = useState('')
     const [dataNascimento, setDataNascimento] = useState('')
-    const [password,setPassword] = useState('')
+    const [password, setPassword] = useState('')
 
 
     async function salvar(evento) {
@@ -44,7 +41,7 @@ const IncluiUser = (props) => {
             dataNascimento,
             password: password,
             foto: "https://randomuser.me/api/portraits/med/women/53.jpg"
-            
+
         }
         //var dataDeHoje = moment(new Date()).format("DD/MM/YYYY")
         if (!(await validarUsuario())) return
@@ -89,7 +86,7 @@ const IncluiUser = (props) => {
                 nome: nome,
                 email: email,
                 userName: userName,
-                password:password,
+                password: password,
                 //dataNascimento: dataNascimento
 
 
@@ -109,64 +106,71 @@ const IncluiUser = (props) => {
         <div>
             <Cabecalho />
             <Menu />
-            <h1 className='titulo-pagina'>Cadastrar usuário</h1>
+            <h1 className='titulo-pagina-user'>Cadastrar usuário</h1>
             <MensagemErro tipo={status.type} message={status.message} />
             <form onSubmit={salvar}>
-                <div className='form-cliente'>
-                    <div className='campo-form-cliente'>
+                <div className='form-user'>
+                    <div className='campo-form-user'>
+                        <div className='campo-user'>
+                            <label className='titulo-user'>Nome</label>
+                        </div>
 
-                        <label className='titulo'>Nome</label>
                         <input
                             value={nome}
-                            className='titulo'
+                            className='titulo-user-input'
                             type="text"
-                            placeholder='Digite o nome do cliente'
+                            placeholder='Digite o nome do user'
                             onChange={(evento) => setNome(evento.target.value)}
                             autoFocus />
 
                     </div>
-                    <div className='campo-form-cliente'>
-                        <label className='titulo'>E-mail</label>
+                    <div className='campo-form-user'>
+                        <div className='campo-user'>
+                            <label className='titulo-user'>E-mail</label>
+                        </div>
                         <input
                             value={email}
-                            className='titulo'
+                            className='titulo-user-input'
                             type="text"
-                            placeholder='Digite o melhor email do cliente'
+                            placeholder='Digite o melhor email do user'
                             onChange={(evento => setEmail(evento.target.value))} />
 
                     </div>
-                    <div className='campo-form-cliente'>
-
-                        <label className='titulo'>UserName</label>
+                    <div className='campo-form-user'>
+                        <div className='campo-user'>
+                            <label className='titulo-user'>UserName</label>
+                        </div>
                         <input
                             value={userName}
-                            className='titulo'
+                            className='titulo-user-input'
                             type="text"
-                            placeholder='Digite o username do cliente'
+                            placeholder='Digite o username do user'
                             onChange={(evento) => setUserName(evento.target.value)}
                             autoFocus />
 
                     </div>
-                    <div className='campo-form-cliente'>
+                    <div className='campo-form-user'>
+                        <div className='campo-user'>
+                            <label className='titulo-user'>Senha</label>
 
-                        <label className='titulo'>Senha</label>
-                        <input
+                        </div><input
                             value={password}
-                            className='titulo'
+                            className='titulo-user-input'
                             type="text"
-                            placeholder='Digite o username do cliente'
+                            placeholder='Digite o username do user'
                             onChange={(evento) => setPassword(evento.target.value)}
                             autoFocus />
 
                     </div>
-                    <div className='campo-form-cliente'>
-
-                        <label className='titulo'>Data de nascimento</label>
+                    <div className='campo-form-user'>
+                        <div className='campo-user'>
+                            <label className='titulo-user'>Data de nascimento</label>
+                        </div>
                         <input
                             value={dataNascimento}
-                            className='titulo'
+                            className='titulo-user-input'
                             type="date"
-                            placeholder='Digite o username do cliente'
+                            placeholder='Digite o username do user'
                             onChange={(evento) => setDataNascimento(evento.target.value)}
                             autoFocus />
 
@@ -175,20 +179,20 @@ const IncluiUser = (props) => {
 
 
 
-                    <div className='campo-form-cliente'>
+                    
                     </div>
-                    <div className='rodape'>
-                        <div className='separa-rodape'>
-                            <Botao>Cadastrar Usuário</Botao>
+                    <div className='rodape-user'>
+                        <div className='separa-rodape-user'>
+                            <Botao>Cadastrar</Botao>
                         </div>
-                        <div className='separa-rodape'>
+                        <div className='separa-rodape-user'>
                             <Botao>
-                                <Link className='rodape-voltar' to="/clientes">Voltar</Link>
+                                <Link className='rodape-voltar' to="/">Voltar</Link>
                             </Botao>
 
                         </div>
                     </div>
-                </div>
+                
             </form>
         </div >
     )

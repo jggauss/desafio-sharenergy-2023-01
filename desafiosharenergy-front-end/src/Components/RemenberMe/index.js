@@ -26,7 +26,7 @@ const RemenberMe = (props) => {
     return (
         <div className="remenberme">
             <input type="checkbox" checked={olha} onChange={trocaEstado} />
-            <label>Remember me</label>
+            <label>Lembrar-me</label>
         </div>
     )
 }

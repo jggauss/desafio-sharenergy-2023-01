@@ -5,44 +5,41 @@
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     
 }
-.centraliza-box {
+.centraliza-box-edita {
     width: 100%;
     padding: 32px ;
     display: flex;
     
 }
-.tabela-consulta{
+.tabela-edita{
     border-radius: 4px;
     width: 800px;
     padding: 32px;
     display: block;
-    
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 18px;
     color: darkslategrey;
     border: 2px solid ;
     border-color: rgb(9, 125, 119);
     
 }
-.linha-consulta{
+.linha-edita{
     display: flex;
-    
     margin: 8px;
     width: 600px;
     border: 2px solid ;
     border-color: rgb(9, 125, 119);
     border-radius: 4px;
-}
-.linha-consuta{
-    
+}   
 
-}
-.cor-campo{
+
+.cor-campo-edita{
     background-color:rgb(187, 230, 228); 
     width: auto;
     display: flex;
 }
 
-.campo{
+.campo-edita{
     
     font-weight: 600;
     padding: 0 8px;
@@ -62,7 +59,7 @@
 
 }
 
-.titulo{
+.titulo-edita{
     font-size: 18px;
     /* font-weight: 500; */
     color: darkslategrey;
@@ -73,7 +70,7 @@
 .mostra-estado{
     margin: 8px;
 }
-.titulo-estado{
+.titulo-estado-edita{
     padding-left: 16px;
     margin-left: 8px;
     width:140px;
@@ -82,20 +79,38 @@
     color: darkslategrey;;
     
 }
-.escolhe-estado{
+.escolhe-estado-edita{
     margin-left: 8px;
     
     margin-top: 8px;
     height: 40px;
 }
-.rodape{
+.rodape-edita{
     width: 300px;
     
     display: inline-flex;
     justify-content: space-between;
     padding: 0 66px;
 }
-.inclui-cliente {
-    
+.inclui-cliente-edita {
+    color: #ffffff;
+    text-decoration: none;
     text-align: center;
+}
+@media(max-width:920px){
+    .centraliza-box-edita{
+        padding-left: 8px;
+        
+    }
+    .tabela-edita{
+        border: none;
+        padding-left: 0;
+    }
+    .linha-edita{
+        width: 90%;
+    }
+    .inclui-cliente-edita{
+        color: #ffffff;
+        text-decoration: none;
+    }
 }

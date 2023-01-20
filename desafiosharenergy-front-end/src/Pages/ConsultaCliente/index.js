@@ -24,7 +24,7 @@ const ConsultaCliente = () => {
                 'Authorization': "Bearer " + valueToken
             }
         }
-        await api.get('/cliente/' + _id,headers)
+        await api.get('/cliente/' + _id, headers)
             .then((response) => {
 
                 setData(response.data)
@@ -47,87 +47,90 @@ const ConsultaCliente = () => {
         <div className='tela'>
             <Cabecalho />
             <Menu />
-            <div className='centraliza-box'>
+            <div className='centraliza-box-consulta'>
 
 
                 <div className='tabela-consulta'>
                     <h1>Consulta Cliente</h1>
                     <div className='linha-consulta'>
-                        <div className='cor-campo'>
-                            <div className='campo'>Nome :</div>
+                        <div className='cor-campo-consulta'>
+                            <div className='campo-consulta'>Nome :</div>
                         </div>
 
-                        <div className='valor'>{data.nome}</div>
+                        <div className='valor-consulta'>{data.nome}</div>
 
                     </div>
                     <div className='linha-consulta'>
-                        <div className='cor-campo'>
-                            <div className='campo'>E-mail :</div>
+                        <div className='cor-campo-consulta'>
+                            <div className='campo-consulta'>E-mail :</div>
                         </div>
-                        <div className='valor'>{data.email}</div>
+                        <div className='valor-consulta'>{data.email}</div>
 
                     </div>
                     <div className='linha-consulta'>
-                        <div className='cor-campo'>
-                            <div className='campo'>Telefone : </div>
+                        <div className='cor-campo-consulta'>
+                            <div className='campo-consulta'>Telefone : </div>
                         </div>
-                        <div className='valor'>{data.telefone}</div>
+                        <div className='valor-consulta'>{data.telefone}</div>
 
                     </div>
                     <div className='linha-consulta'>
-                        <div className='cor-campo'>
-                            <div className='campo'>cpf : </div>
+                        <div className='cor-campo-consulta'>
+                            <div className='campo-consulta'>cpf : </div>
                         </div>
-                        <div className='valor'>{data.cpf}</div>
+                        <div className='valor-consulta'>{data.cpf}</div>
 
                     </div>
                     <div className='linha-consulta'>
-                        <div className='cor-campo'>
-                            <div className='campo'>Rua : </div>
+                        <div className='cor-campo-consulta'>
+                            <div className='campo-consulta'>Rua : </div>
                         </div>
-                        <div className='valor'>{data.rua}</div>
+                        <div className='valor-consulta'>{data.rua}</div>
 
                     </div>
                     <div className='linha-consulta'>
-                        <div className='cor-campo'>
-                            <div className='campo'>Número : </div>
+                        <div className='cor-campo-consulta'>
+                            <div className='campo-consulta'>Número : </div>
                         </div>
-                        <div className='valor'>{data.numero}</div>
+                        <div className='valor-consulta'>{data.numero}</div>
 
                     </div>
                     <div className='linha-consulta'>
-                        <div className='cor-campo'>
-                            <div className='campo'>Bairro : </div>
+                        <div className='cor-campo-consulta'>
+                            <div className='campo-consulta'>Bairro : </div>
                         </div>
-                        <div className='valor'>{data.bairro}</div>
+                        <div className='valor-consulta'>{data.bairro}</div>
 
                     </div>
                     <div className='linha-consulta'>
-                        <div className='cor-campo'>
-                            <div className='campo'>Cidade : </div>
+                        <div className='cor-campo-consulta'>
+                            <div className='campo-consulta'>Cidade : </div>
                         </div>
-                        <div className='valor'>{data.cidade}</div>
+                        <div className='valor-consulta'>{data.cidade}</div>
 
                     </div>
 
                     <div className='linha-consulta'>
-                        <div className='cor-campo'>
-                            <div className='campo'>CEP : </div>
+                        <div className='cor-campo-consulta'>
+                            <div className='campo-consulta'>CEP : </div>
                         </div>
-                        <div className='valor'>{data.cep}</div>
+                        <div className='valor-consulta'>{data.cep}</div>
                     </div>
 
                     <div className='linha-consulta'>
-                        <div className='cor-campo'>
-                            <div className='campo'>Estado : </div>
+                        <div className='cor-campo-consulta'>
+                            <div className='campo-consulta'>Estado : </div>
                         </div>
-                        <div className='valor'>{data.estado}</div>
+                        <div className='valor-consulta'>{data.estado}</div>
 
                     </div>
-                    <div className='rodape'>
-                    <Botao>
-                        <Link className='inclui-cliente' to="/clientes">Voltar</Link>
-                    </Botao>
+                    <div className='rodape-consulta'>
+                        <Botao>
+                            <div className='btn-cons'>
+                                <Link className='inclui-cliente-consulta' to="/clientes">Voltar</Link>
+                            </div>
+                            
+                        </Botao>
 
                     </div>
 

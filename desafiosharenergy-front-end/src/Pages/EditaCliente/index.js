@@ -159,61 +159,61 @@ const EditaCliente = () => {
         <div className='tela'>
             <Cabecalho />
             <Menu />
-            <div className='centraliza-box'>
-                <div className='tabela-consulta'>
+            <div className='centraliza-box-edita'>
+                <div className='tabela-edita'>
                     <h1>Altera Cliente</h1>
                     <MensagemErro tipo={status.type} message={status.message} />
                     <form onSubmit={salvar}>
-                        <div className='linha-consulta'>
-                            <div className='cor-campo'>
-                                <label className='campo'>Nome :</label>
+                        <div className='linha-edita'>
+                            <div className='cor-campo-edita'>
+                                <label className='campo-edita'>Nome :</label>
                             </div>
                             <input
                                 value={nome}
-                                className='titulo'
+                                className='titulo-edita'
                                 type="text"
                                 placeholder='Digite o nome do cliente'
                                  onChange={(evento) => setNome(evento.target.value)}
                                 autoFocus />
                         </div>
-                        <div className='linha-consulta'>
-                            <div className='cor-campo'>
-                                <label className='campo'>E-mail :</label>
+                        <div className='linha-edita'>
+                            <div className='cor-campo-edita'>
+                                <label className='campo-edita'>E-mail :</label>
                             </div>
                             <input
 
                                 value={email}
-                                className='titulo'
+                                className='titulo-edita'
                                 type="text"
                                 placeholder='Digite o melhor email do cliente'
                              onChange={(evento => setEmail(evento.target.value))} 
                             />
 
                         </div>
-                        <div className='linha-consulta'>
-                            <div className='cor-campo'>
-                                <label className='campo'>Telefone : </label>
+                        <div className='linha-edita'>
+                            <div className='cor-campo-edita'>
+                                <label className='campo-edita'>Telefone : </label>
                             </div>
                             <MaskedInput
                                 mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
                                 guide={false}
                                 value={telefone}
-                                className='titulo'
+                                className='titulo-edita'
                                 type="text"
                                 placeholder='Digite o melhor telefone do cliente'
                              onChange={(evento => setTelefone(evento.target.value))} 
                             />
 
                         </div>
-                        <div className='linha-consulta'>
-                            <div className='cor-campo'>
-                                <label className='campo'>cpf : </label>
+                        <div className='linha-edita'>
+                            <div className='cor-campo-edita'>
+                                <label className='campo-edita'>cpf : </label>
                             </div>
                             <MaskedInput
                                 mask={[/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/,]}
                                 value={cpf}
                                 guide={false}
-                                className='titulo'
+                                className='titulo-edita'
                                 type="text"
                                 placeholder='Digite o CPF do cliente'
                                 onChange={(evento => setCpf(evento.target.value))}
@@ -221,26 +221,26 @@ const EditaCliente = () => {
                             />
 
                         </div>
-                        <div className='linha-consulta'>
-                            <div className='cor-campo'>
-                                <label className='campo'>Rua : </label>
+                        <div className='linha-edita'>
+                            <div className='cor-campo-edita'>
+                                <label className='campo-edita'>Rua : </label>
                             </div>
                             <input
                                 value={rua}
-                                className='titulo'
+                                className='titulo-edita'
                                 type="text"
                                 placeholder='Digite o logradouro (rua, avenida, travessa...) do cliente'
                              onChange={(evento => setRua(evento.target.value))} 
                             />
 
                         </div>
-                        <div className='linha-consulta'>
-                            <div className='cor-campo'>
-                                <label className='campo'>Número : </label>
+                        <div className='linha-edita'>
+                            <div className='cor-campo-edita'>
+                                <label className='campo-edita'>Número : </label>
                             </div>
                             <input
                                 value={numero}
-                                className='titulo'
+                                className='titulo-edita'
                                 type="text"
                                 placeholder='Casa e/ou apartamento e bloco'
                             onChange={(evento => setNumero(evento.target.value))} 
@@ -248,55 +248,55 @@ const EditaCliente = () => {
 
 
                         </div>
-                        <div className='linha-consulta'>
-                            <div className='cor-campo'>
-                                <label className='campo'>Bairro : </label>
+                        <div className='linha-edita'>
+                            <div className='cor-campo-edita'>
+                                <label className='campo-edita'>Bairro : </label>
                             </div>
                             <input
                                 value={bairro}
-                                className='titulo'
+                                className='titulo-edita'
                                 type="text"
                                 placeholder='Digite o Bairro'
                             onChange={(evento => setBairro(evento.target.value))} 
                             />
 
                         </div>
-                        <div className='linha-consulta'>
-                            <div className='cor-campo'>
-                                <label className='campo'>Cidade : </label>
+                        <div className='linha-edita'>
+                            <div className='cor-campo-edita'>
+                                <label className='campo-edita'>Cidade : </label>
                             </div>
                             <input
                                 value={cidade}
-                                className='titulo'
+                                className='titulo-edita'
                                 type="text"
                                 placeholder='Digite a cidade '
                             onChange={(evento => setCidade(evento.target.value))} 
                             />
 
                         </div>
-                        <div className='linha-consulta'>
-                            <div className='cor-campo'>
-                                <label className='campo'>CEP : </label>
+                        <div className='linha-edita'>
+                            <div className='cor-campo-edita'>
+                                <label className='campo-edita'>CEP : </label>
                             </div>
                             <MaskedInput
                                 mask={[/\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/,]}
                                 guide={false}
                                 value={cep}
-                                className='titulo'
+                                className='titulo-edita'
                                 type="text"
                                 placeholder='Digite o CEP'
                                 onChange={(evento => setCep(evento.target.value))} 
                             />
                         </div>
-                        <div className='linha-consulta'>
-                            <div className='cor-campo'>
-                                <label className='campo'>Estado</label>{ }
+                        <div className='linha-edita'>
+                            <div className='cor-campo-edita'>
+                                <label className='campo-edita'>Estado</label>{ }
                             </div>
-                            <div className='titulo'>
+                            <div className='titulo-edita'>
                                 {estado}
                             </div>
-                            <div className='escolhe-estado'>
-                                <select name="estado"  className='titulo-estado'         onChange={texto => { setEstado(texto.target.value) }}>
+                            <div className='escolhe-estado-edita'>
+                                <select name="estado"  className='titulo-estado-edita'         onChange={texto => { setEstado(texto.target.value) }}>
                                     <option value={""}>Selecione</option>
                                     <option value="AC">Acre</option>
                                     <option value="AL">Alagoas</option>
@@ -328,12 +328,12 @@ const EditaCliente = () => {
                                 </select>
                             </div>
                         </div> 
-                        <div className='rodape'>
+                        <div className='rodape-edita'>
                         <Botao>
                             Salvar
                         </Botao>
                         <Botao>
-                            <Link className='inclui-cliente' to="/clientes">Voltar</Link>
+                            <Link className='inclui-cliente-edita' to="/clientes">Voltar</Link>
                         </Botao>
 
                         </div>

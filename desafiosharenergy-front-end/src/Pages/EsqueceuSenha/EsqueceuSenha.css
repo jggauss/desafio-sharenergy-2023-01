@@ -1,6 +1,6 @@
-.form-cliente {
+.form-cliente-esqueceu {
     display: block;
-    width: 1000px;
+    width: 50%;
     color: darkslategrey;
     margin: 32px;
     padding: 8px;
@@ -13,7 +13,7 @@
     padding: 0 32px;
     color: darkslategrey;
 }
-.campo-form-cliente{
+.campo-form-cliente-esqueceu{
 display: block; 
 align-content: space-between;   
 margin: 16px;
@@ -24,24 +24,7 @@ border-radius: 4px;
 
     
 }
-.endereco {
-    display: block;
-    margin: 16px;
-    border: 2px solid ;
-    border-color: rgb(9, 125, 119);
-    border-radius: 4px;
-    padding-bottom: 32px;
-    
-
-}
-.cidade{
-    display: block;
-    margin-top: 16px;
-    border-color: rgb(9, 125, 119);
-    border-radius: 4px;
-
-}
-.titulo {
+.titulo-esqueceu {
     color: darkslategrey;
     width: 60%;
     display: inline-flex;
@@ -53,28 +36,6 @@ border-radius: 4px;
 }
 .form-cliente label {
     width: 60px;
-}
-.numero {
-    width: auto;
-    margin: 16px;
-    font-size: 18px;
-    border-radius: 4px;
-    color: darkslategrey;
-}
-.titulo-cep {
-    width: 120px;
-    margin: 16px;
-    font-size: 18px;
-    border-radius: 4px;
-    color: darkslategrey;
-}
-.titulo-estado{
-    padding-left: 16px;
-    margin-left: 8px;
-    width:140px;
-    font-size: 18px;
-    border-radius: 4px;
-    
 }
 .rodape{
     display: flex;
@@ -89,4 +50,15 @@ border-radius: 4px;
 }
 .estado-selecao{
     padding-left: 32px;
+}
+@media(max-width:920px){
+    .form-cliente-esqueceu{
+        border: none;
+        padding-left: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    .titulo{
+        width: 100%;
+    }
 }

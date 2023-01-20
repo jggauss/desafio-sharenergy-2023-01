@@ -34,7 +34,7 @@ const Status = () => {
             <div className="tabela-status">
 
 
-                <h1>Status</h1>
+                <h1 className="titulo-cel">Status</h1>
                 <form onSubmit={MostraStatus}>
                     <div className="divide-status">
 
@@ -103,7 +103,7 @@ const Status = () => {
                         </div>
                     </div>
                 </form>
-                <img src={exibe} alt="" />
+                <img className="imagem-status" src={exibe} alt="" />
             </div>
         </div>
 

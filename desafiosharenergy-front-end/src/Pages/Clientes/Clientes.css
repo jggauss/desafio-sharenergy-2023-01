@@ -11,8 +11,10 @@
 .tabela-clientes{
     font-size: 18px;
     color: darkslategrey;
+    
 }
 .acoes {
+    
     display: inline-flex;
     padding-left: 16px;
     margin: 8px;
@@ -45,23 +47,87 @@
     cursor: pointer;
 }
 .item-tabela-cliente {
+    
     padding-left: 32px;
     font-weight: 500;
     
 }
-.inclui-cliente{
+.inclui-clientes{
     
+   
     cursor: pointer;
     text-decoration: none;
     color: #ffffff;
 }
-
+.monstra-cliente-home{
+    
+    color: #ffffff;
+}
 
 .rodape{
     display: flex;
+
     
 }
-.separa-rodape{
+
+@media(max-width:920px){
+
+    .tabela-clientes{
+        margin-left: 0;
+        padding: 0;
+
+    }
+
+    .item-tabela-cliente{
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+   .item-tabela-cliente-cel{
+    display: none;
+   
+   } 
+   .edita{
+    margin-left: 0;
+    font-size: 12px;
+    padding: 16px 8px;
+   }
+   .exclui{
+    margin-left: 0;
+    font-size: 12px;
+    padding: 16px 8px;
+   }
+   .altera{
+    margin-left: 0;
+    font-size: 12px;
+    padding: 16px 8px;
+   }
+   .tabela{
+    width: 100%;
+    padding-left: 0px;
+    margin-left: 0;
+    display: block;
     
-    padding-left: 16px;
+   }
+   
+   .divide-tela-superior{
+    width: 100%;
+    display: block;
+    
+   }
+   .nome-titulo-cel{
+    text-align: center;
+   }
+.btn-const{
+}
+.inclui-clientes{
+    
+    padding: 0;
+    
+    color: #ffffff;
+    text-decoration: none;
+    ;
+}
+
+   
 }

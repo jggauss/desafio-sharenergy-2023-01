@@ -107,7 +107,7 @@ const Home = () => {
             <Cabecalho />
             <Menu />
             <div className='tabela-home'>
-                <h1>Usuários</h1>
+                <h1 className='tela-celular'>Usuários</h1>
                 <div>
                     <label className='pesquisa'>Pesquisa : </label>
                     <input type="text" value={pesquisa} onChange={(evento) => setPesquisa(evento.target.value)} autoFocus />
@@ -117,9 +117,9 @@ const Home = () => {
                         <tr>
                             <th>Foto</th>
                             <th>Nome</th>
-                            <th>Idade</th>
-                            <th>E-mail</th>
-                            <th>Username</th>
+                            <th className='item-usuario-cel'>Idade</th>
+                            <th className='item-usuario-cel'>E-mail</th>
+                            <th className='item-usuario-cel'>Username</th>
 
                         </tr>
                     </thead>
@@ -132,18 +132,18 @@ const Home = () => {
                                 </td>
 
                                 <td className='item-usuario'>{dado.name}</td>
-                                <td className='item-usuario'>{dado.idade}</td>
-                                <td className='item-usuario'>{dado.email}</td>
-                                <td className='item-usuario'>{dado.userName}</td>
+                                <td className='item-usuario item-usuario-cel'>{dado.idade}</td>
+                                <td className='item-usuario item-usuario-cel'>{dado.email}</td>
+                                <td className='item-usuario item-usuario-cel'item-usuario-cel>{dado.userName}</td>
                             </tr>
                         ))}
                         <tr></tr>
                     </tbody>
                 </table>
-
+                
                 <MensagemErro tipo={status.type} message={status.message} />
 
-                <div >
+                <div className='rodape-celular' >
                     {page !== 1 ? <button className='cor-btn' type='button' onClick={() => GetUsers(1)}>Primeira</button> : <button className='cor-btn-desligado' disabled>Primeira</button>}
                     {page !== 1 ? <button className='cor-btn'  type='button' onClick={() => GetUsers(page - 1)}>{page - 1}</button> : ""}
                     <button className='cor-btn-desligado'  disabled type='button'>{page}</button>
@@ -153,7 +153,6 @@ const Home = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 export default Home

@@ -12,3 +12,14 @@
     cursor: pointer;
     text-decoration: none;
 }
+
+@media(max-width:768px){
+    .item-menu{
+        display: block;
+        font-size: 24px;
+    }
+    .menu-principal{
+        padding: 8px 32px;
+        margin: 0;
+    }
+}

@@ -35,13 +35,13 @@ const EsqueceuSenha = (props) => {
             </div>
             
             <form onSubmit={mensagem}>
-                <div className='form-cliente'>
+                <div className='form-cliente-esqueceu'>
                     
-                    <div className='campo-form-cliente'>
-                        <label className='titulo'>E-mail</label>
+                    <div className='campo-form-cliente-esqueceu'>
+                        <label className='titulo-esqueceu'>Escreva o E-mail cadastrado</label>
                         <input
                             value={email}
-                            className='titulo'
+                            className='titulo-esqueceu'
                             type="text"
                             placeholder='Digite o email cadastrado para recuperar a senha'
                             onChange={(evento => setEmail(evento.target.value))} />
@@ -51,7 +51,7 @@ const EsqueceuSenha = (props) => {
 
 
 
-                    <div className='campo-form-cliente'>
+                    
                     </div>
                     <div className='rodape'>
                         <div className='separa-rodape'>
@@ -66,7 +66,7 @@ const EsqueceuSenha = (props) => {
 
                         </div>
                     </div>
-                </div>
+                
             </form>
         </div >
     )

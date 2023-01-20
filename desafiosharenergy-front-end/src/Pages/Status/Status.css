@@ -54,3 +54,39 @@ width: 120px;
 color: #ffffff;
 text-decoration: none;
 }
+
+@media(max-width:768px){
+    .titulo-cel {
+        text-align: center;
+    }
+    .separa{
+        padding-left: 0;
+        width: 20%;
+        display: block;
+
+    }
+    .status{
+        display: block;
+        padding-left: 40px;
+        text-align: center;
+        width: 200px;
+        
+    }
+    .separa .status{
+        text-align: center;
+    }
+    .divide-status{
+        display: block;
+    }
+   .imagem-status{
+    width: 70%;
+    padding-left: 32px;
+   } 
+   .rodape{
+    position:relative;
+    margin-left: 0;
+    padding-left: 0;
+    
+    display: block;
+   }
+}

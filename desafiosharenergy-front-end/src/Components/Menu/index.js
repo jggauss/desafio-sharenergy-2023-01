@@ -12,9 +12,7 @@ const Menu = (props) => {
         <Link className='item-menu' to='/randomdog'>RandomDog</Link>
         <Link className='item-menu' to='/clientes'>Clientes</Link>
         <Link className='item-menu' to='/' onClick={handleLogout}>Sair</Link>
-        
     </div>
-
     )
 }
 export default Menu

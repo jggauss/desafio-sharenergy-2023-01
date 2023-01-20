@@ -13,7 +13,8 @@
     display: flex;
     padding: 16px 0 0 64px;
 }
-.centraliza-box {
+.centraliza-box-consulta {
+    display: block;
     width: 100%;
     padding: 32px ;
     display: flex;
@@ -43,11 +44,11 @@
     justify-content: space-between;
 
 }
-.cor-campo{
+.cor-campo-consulta{
     background-color:rgb(187, 230, 228); 
 }
 
-.campo{
+.campo-consulta{
     
     font-weight: 600;
     padding: 0 8px;
@@ -55,15 +56,61 @@
     width: 90px;
     margin: 8px;
 }
-.valor{
+.valor-consulta{
     font-size: 18px;
     font-weight: 500;
     color: darkslategrey;
     padding: 0 16px;
     margin: 8px;
 }
-.rodape {
+.rodape.consulta {
     width: 100%;
     margin-left: 64px;
     color: darkslategrey;
+}
+
+.inclui-cliente-consulta{
+        
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+@media(max-width:920px){
+    .centraliza-box-consulta{
+        width: 100%;        
+        padding-left: 8px;
+        padding-top: 8px;
+        
+        
+    }
+    .tabela-consulta{
+        padding-top: 8px;
+        padding-left: 0;
+        display: block;
+        width: 100%;
+        border: none;
+    }
+    .linha-consulta{
+        width: 100%;
+        padding-left: 0;
+    }
+    .campo-consulta{
+        padding-left: 0;
+        width: 50px;
+        font-size: 12px;
+
+    }
+    .rodape.consulta{
+        padding-left: 60px;
+        
+    }
+    .btn-cons{
+        
+    }
+    .inclui-cliente-consulta{
+        
+        text-decoration: none;
+        color: #ffffff;
+        
+    }
 }

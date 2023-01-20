@@ -2,18 +2,22 @@
     
     display: block;
     width: 100%;
+    color: darkslategrey;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     
 }
-.centraliza-box {
+.centraliza-box-exclui {
     width: 100%;
     padding: 32px ;
     display: flex;
     
+    
 }
-.tabela-consulta{
+.tabela-exclui{
     border-radius: 4px;
     width: 800px;
-    padding:0 32px 32px 32px;
+    
+    padding:32px 32px 32px 32px;
     display: block;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 18px;
@@ -22,7 +26,7 @@
     border-color: rgb(9, 125, 119);
     
 }
-.linha-consulta{
+.linha-exclui{
     display: flex;
     margin: 8px;
     width: 700px;
@@ -31,22 +35,35 @@
     border-radius: 4px;
     
 }
-.cor-campo{
+.cor-campo-exclui{
     background-color:rgb(187, 230, 228); 
+    width: auto;
+    display: flex;
 }
 
-.campo{
+.campo-exclui{
     font-weight: 600;
     padding: 0 8px;
     width: 90px;
     margin: 8px;
 
 }
-.valor{
+.valor-exclui{
     font-size: 18px;
     font-weight: 500;
     color: darkslategrey;
     padding: 0 16px;
+    margin: 8px;
+
+}
+
+
+.titulo-exclui{
+    font-size: 18px;
+    /* font-weight: 500; */
+    color: darkslategrey;
+    padding: 0 16px;
+    margin: 8px;
 
 }
 .confirma-exclusao{
@@ -67,4 +84,17 @@
     cursor: pointer;
     text-decoration: none;
     color: #ffffff;
+}
+
+@media(max-width:920px){
+    .centraliza-box-exclui{
+        padding-left: 8px;
+    }
+    .tabela-exclui{
+        border: none;
+        padding-left: 0;
+    }
+    .linha-exclui{
+        width: 80%;
+    }
 }
