@@ -1,7 +1,7 @@
 const apiUserRandom = require('../../ConfigApi/ConfigApi')
 const Users = require('../Models/User')
 const UserControler = require('./UserControler')
-
+const bcrypt = require('bcrypt');
 
 class UserRandom {
     async list(req,res){
@@ -15,7 +15,7 @@ class UserRandom {
                 email:dado.email,
                 userName: dado.login.username,
                 foto:dado.picture.medium,
-                password : "$2b$10$QMTJkjIm9DAFkzf7G4t5qeth.2JEYacMmp1t7sStKhZCZz28qz68e",
+                password : bcrypt.hashSync("123456", 10),
                 idade :Math.floor(((new Date()-new Date(dado.dob.date))/ (1000 * 60 * 60 * 24))/360),
                 dataNascimento:dado.dob.date
 
