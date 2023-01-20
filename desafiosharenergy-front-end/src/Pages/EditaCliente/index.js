@@ -290,7 +290,7 @@ const EditaCliente = () => {
                         </div>
                         <div className='linha-edita'>
                             <div className='cor-campo-edita'>
-                                <label className='campo-edita'>Estado</label>{ }
+                                <label className='campo-edita'>Estado :</label>{ }
                             </div>
                             <div className='titulo-edita'>
                                 {estado}
